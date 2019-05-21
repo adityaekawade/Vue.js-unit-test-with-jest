@@ -1,5 +1,6 @@
 <template>
   <div>
+    <i>{{hint}}</i>
     <v-text-field
       type="input"
       single-line
@@ -15,6 +16,9 @@
 <script>
 export default {
   props: {
+    hint: {
+      type: String
+    }
   },
   data () {
     return {

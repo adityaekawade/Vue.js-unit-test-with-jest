@@ -50,7 +50,7 @@
       title: "Weather App",
       fahrenheitTemperature: null,
       city: "",
-
+      hint: "Enter US zip code (ex: 84102) and click Enter to get started"
     })
   }
 </script>
