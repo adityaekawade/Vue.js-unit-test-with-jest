@@ -76,8 +76,8 @@ it('test mock module', () => {
     })
 });
 
-describe("Kelvin to Farenhite converter", function() {
- it("should convert Kelvin temperature to Farenhit", function() {
-   expect(model.convertToFarenhite(270)).toBe(26);
+describe("Kelvin to Fahrenheit converter", function() {
+ it("should convert Kelvin temperature to Fahrenheit", function() {
+   expect(model.convertToFahrenheit(270)).toBe(26);
  })
 })

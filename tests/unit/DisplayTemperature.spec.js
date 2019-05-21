@@ -5,7 +5,7 @@ import vuetify from "vuetify"
 describe('DisplayTemperature', () => {
   let wrapper;
   let city = "Salt Lake City"
-  let farenhiteTemperature = 39
+  let fahrenheitTemperature = 39
   beforeEach(()=>{
     const localVue = createLocalVue()
     localVue.use(vuetify)
@@ -14,7 +14,7 @@ describe('DisplayTemperature', () => {
       localVue,
       propsData:{
         city,
-        farenhiteTemperature
+        fahrenheitTemperature
       }
     })
   })
@@ -28,7 +28,7 @@ describe('DisplayTemperature', () => {
   })
 
   it('check the output', ()=>{
-    expect(wrapper.text()).toMatch(`The current temperature in ${city} is ${farenhiteTemperature} F.`)
+    expect(wrapper.text()).toMatch(`The current temperature in ${city} is ${fahrenheitTemperature} F.`)
   })
 
 });

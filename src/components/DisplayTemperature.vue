@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-alert data-test="alertElement" type="success" :value="true" outline>
-      The current temperature in {{city}} is {{farenhiteTemperature}} F.
+      The current temperature in {{city}} is {{fahrenheitTemperature}} F.
     </v-alert>
   </div>
 </template>
@@ -13,7 +13,7 @@ export default {
     city: {
       type: String
     },
-    farenhiteTemperature: {
+    fahrenheitTemperature: {
       type: Number
     }
   },

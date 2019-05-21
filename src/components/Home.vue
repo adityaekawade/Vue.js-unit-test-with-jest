@@ -11,10 +11,10 @@
       </v-flex>
 
       <v-flex mb-4>
-        <div v-if="farenhiteTemperature!==null">
+        <div v-if="fahrenheitTemperature!==null">
           <DisplayTemperature
             :city="city"
-            :farenhiteTemperature="farenhiteTemperature"
+            :fahrenheitTemperature="fahrenheitTemperature"
           />
         </div>
       </v-flex>
@@ -38,14 +38,17 @@
         var data = model.fetchResponse(window.fetch, code);
         data.then(res=>{
           let kelvinTemp = res.main.temp;
-          this.FarenhiteConverter(kelvinTemp);
+          this.FahrenheitConverter(kelvinTemp);
           this.city = res.name;
         })
       },
+      FahrenheitConverter(kelvinTemp){
+        this.fahrenheitTemperature = model.convertToFahrenheit(kelvinTemp)
+      }
     },
     data: () => ({
       title: "Weather App",
-      farenhiteTemperature: null,
+      fahrenheitTemperature: null,
       city: "",
 
     })

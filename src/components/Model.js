@@ -9,7 +9,7 @@ export default class Model {
   requestResponse(zipCode){
     return request(zipCode);
   }
-  convertToFarenhite(kelvinTemp){
+  convertToFahrenheit(kelvinTemp){
     return (Math.round((kelvinTemp-273.15)*1.8)+32)
   }
 
